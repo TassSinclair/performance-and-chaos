@@ -6,6 +6,7 @@
 
 * Read and then run `./setup.sh` . It will install the following:
  * [Homebrew](http://brew.sh), if you don't have it.
+ * `VirtualBox`, a virtual machine handler.
  * `kubectl`, which we use to control a [Kubernetes](https://kubernetes.io/) instance.
  * `Minikube`, a small-scale Kubernetes instance.
 
