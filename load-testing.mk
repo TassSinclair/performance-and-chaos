@@ -9,3 +9,5 @@ run-load-tester:
 		-e JAVA_OPTS="-Dusers=500 -Dduration=30 -Dhost=http://$(shell minikube ip):30001" \
 		${GATLING_IMAGE} \
 		-s GatlingSimulation
+show-load-tester-reports:
+	open $(CURDIR)/gatling/results/
