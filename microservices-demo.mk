@@ -8,6 +8,7 @@ deploy-demo:
 show-demo-pods:
 	kubectl get pods --namespace="sock-shop"
 show-demo-frontend:
+	# Opens up in your browser
 	open http://$(shell minikube ip):30001
 undeploy-demo:
 	kubectl delete -f ${KUBE_CONFIG}/manifests-logging

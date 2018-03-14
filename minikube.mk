@@ -1,3 +1,5 @@
+# Instructions from https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/
+
 setup:
 	# Installs Brew (with Cask) first if it's not present.
 	command -v brew >/dev/null 2>&1 \
@@ -15,13 +17,13 @@ setup:
 	sudo chown root:wheel /usr/local/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
 	sudo chmod u+s /usr/local/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
 start:
-	# Instructions from https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/
 	minikube start --vm-driver=xhyve --memory 8192
 	eval $(minikube docker-env)
 stop:
 	minikube stop
 	eval $(minikube docker-env -u)
 show-dashboard:
+	# Opens up in your browser
 	minikube dashboard
 destroy:
 	minikube destroy
