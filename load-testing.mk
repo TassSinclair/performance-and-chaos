@@ -6,6 +6,6 @@ run-load-tester:
 		-v $(CURDIR)/gatling/conf:/opt/gatling/conf \
 		-v $(CURDIR)/gatling/user-files:/opt/gatling/user-files \
 		-v $(CURDIR)/gatling/results:/opt/gatling/results \
-		-e JAVA_OPTS="-Dusers=10 -Dduration=60 -Dhost=http://$(shell minikube ip):30001 \
+		-e JAVA_OPTS="-Dusers=10 -Dduration=60 -Dhost=http://$(shell minikube ip):30001" \
 		${GATLING_IMAGE} \
 		-s GatlingSimulation
