@@ -1,5 +1,3 @@
-# Instructions from https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/
-
 setup:
 	# Installs Brew (with Cask) first if it's not present.
 	command -v brew >/dev/null 2>&1 \
@@ -27,5 +25,6 @@ show-dashboard:
 	minikube dashboard
 delete:
 	minikube delete
-destroy: delete
+destroy:
+	sudo killall docker-machine-driver-xhyve
 	sudo rm -r ~/.minikube
