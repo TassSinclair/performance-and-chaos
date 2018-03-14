@@ -25,5 +25,7 @@ stop:
 show-dashboard:
 	# Opens up in your browser
 	minikube dashboard
-destroy:
-	minikube destroy
+delete:
+	minikube delete
+destroy: delete
+	sudo rm -r ~/.minikube
