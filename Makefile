@@ -7,3 +7,4 @@ default:
 include minikube.mk
 include microservices-demo.mk
 include load-testing.mk
+include chaos.mk
